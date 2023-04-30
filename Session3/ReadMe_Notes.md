@@ -44,6 +44,32 @@ Similarly when we will lock the S3 bucket using dynamodb it will not allow anoth
 
 
 
+Variables
+-----------
+1) If you are repeating the values in multiple places, then you need to do the change in all places if there is a moification.
+
+2) If we use variable change at single place reflect everywhere.
+3) Keeping varaibles aside will save us from accidental changes.
+
+variables.tf file we eed to keep all variables
+--------------------------------------------
+string
+map
+number = integer
+boolean = true/false
+
+Pass through command line:
+--------------------------
+terraform apply -var "cidr=10.0.0.0/16"
+
+variables.tf is to declare variable. You can keep default values also here. But not recomended.
+terraform.tfvars to provide default values to variables.
+Also you can always override values from command line.
+
+
+
+
+
 
 
 
